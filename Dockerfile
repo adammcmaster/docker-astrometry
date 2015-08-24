@@ -14,7 +14,4 @@ ADD /astrometry.net/ /src/
 
 WORKDIR /src/
 
-RUN make
-RUN make py
-RUN make extra
-RUN make install
+RUN make && make py && make extra && make install && rm -rf /src/*
