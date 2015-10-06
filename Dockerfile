@@ -14,4 +14,6 @@ ADD /astrometry.net/ /src/
 
 WORKDIR /src/
 
+ENV PATH /usr/local/astrometry/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 RUN make && make py && make extra && make install && rm -rf /src/*
